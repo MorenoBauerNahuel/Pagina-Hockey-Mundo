@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página no encontrada | Mundo Hockey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pastel-mint: #E8F5E8;
+            --pastel-blue: #E3F2FD;
+            --pastel-pink: #FCE4EC;
+            --pastel-yellow: #FFF9C4;
+            --pastel-purple: #F3E5F5;
+            --pastel-coral: #FFE0E0;
+            --soft-gray: #F8F9FA;
+            --text-primary: #2C3E50;
+            --text-secondary: #6C757D;
+            --accent-mint: #81C784;
+            --accent-blue: #64B5F6;
+            --accent-pink: #F48FB1;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--pastel-mint) 0%, var(--pastel-blue) 50%, var(--pastel-pink) 100%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--text-primary) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            color: var(--accent-mint);
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-mint) !important;
+            background: rgba(129, 199, 132, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            color: var(--text-secondary);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dropdown-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-mint), var(--accent-blue));
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .dropdown-item:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .dropdown-item:hover::before {
+            width: 100%;
+        }
+
+        /* 404 Container */
+        .error-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .error-content {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-mint), var(--accent-blue), var(--accent-pink));
+        }
+
+        /* 404 Number */
+        .error-number {
+            font-size: 8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* Hockey Puck Animation */
+        .hockey-puck {
+            width: 60px;
+            height: 20px;
+            background: linear-gradient(135deg, #2C3E50, #34495E);
+            border-radius: 50px;
+            margin: 2rem auto;
+            position: relative;
+            animation: slide 3s ease-in-out infinite;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hockey-puck::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 2px;
+            background: var(--accent-mint);
+            border-radius: 1px;
+        }
+
+        .hockey-puck::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 2px;
+            height: 10px;
+            background: var(--accent-mint);
+            border-radius: 1px;
+        }
+
+        /* Text Content */
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .error-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-message {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            background: rgba(129, 199, 132, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-mint);
+        }
+
+        /* Action Buttons */
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-custom {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+            color: white;
+            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(129, 199, 132, 0.4);
+            color: white;
+        }
+
+        .btn-secondary-custom {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-primary);
+            border: 2px solid rgba(129, 199, 132, 0.3);
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--accent-mint);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--accent-mint);
+        }
+
+        /* Hockey Sticks Background */
+        .hockey-stick {
+            position: absolute;
+            width: 200px;
+            height: 10px;
+            background: linear-gradient(90deg, #8D6E63, #A1887F);
+            border-radius: 5px;
+            opacity: 0.1;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hockey-stick:nth-child(1) {
+            top: 15%;
+            left: -10%;
+            transform: rotate(45deg);
+            animation-delay: 0s;
+        }
+
+        .hockey-stick:nth-child(2) {
+            top: 70%;
+            right: -10%;
+            transform: rotate(-45deg);
+            animation-delay: 2s;
+        }
+
+        .hockey-stick:nth-child(3) {
+            bottom: 20%;
+            left: 10%;
+            transform: rotate(30deg);
+            animation-delay: 1s;
+        }
+
+        /* Floating Hockey Pucks */
+        .floating-puck {
+            position: absolute;
+            width: 30px;
+            height: 10px;
+            background: linear-gradient(135deg, #2C3E50, #34495E);
+            border-radius: 50px;
+            opacity: 0.2;
+            animation: floatPuck 6s ease-in-out infinite;
+        }
+
+        .floating-puck:nth-child(4) {
+            top: 25%;
+            right: 20%;
+            animation-delay: 0s;
+        }
+
+        .floating-puck:nth-child(5) {
+            bottom: 35%;
+            left: 25%;
+            animation-delay: 3s;
+        }
+
+        /* Search Box */
+        .search-container {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+            gap: 0.5rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid rgba(129, 199, 132, 0.3);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-mint);
+            box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.1);
+        }
+
+        .search-btn {
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.3);
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        @keyframes slide {
+            0%, 100% { transform: translateX(-50px); }
+            50% { transform: translateX(50px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(45deg); }
+            50% { transform: translateY(-15px) rotate(45deg); }
+        }
+
+        @keyframes floatPuck {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-25px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-content {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 1rem;
+                padding-top: 100px;
+            }
+
+            .error-content {
+                padding: 3rem 2rem;
+            }
+
+            .error-number {
+                font-size: 6rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .error-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-custom {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-input,
+            .search-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .error-number {
+                font-size: 4.5rem;
+            }
+
+            .error-title {
+                font-size: 1.8rem;
+            }
+
+            .hockey-stick {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="hockey-stick"></div>
+    <div class="hockey-stick"></div>
+    <div class="hockey-stick"></div>
+    <div class="floating-puck"></div>
+    <div class="floating-puck"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hockey-puck"></i>
+                MUNDO HOCKEY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-table me-1"></i>Tabla de Posiciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="posiciones/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="posiciones/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-calendar-alt me-1"></i>Fixture/Resultados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="fixture/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="fixture/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Content -->
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-number">404</div>
+            
+            <div class="hockey-puck"></div>
+            
+            <h1 class="error-title">¡Fuera de juego!</h1>
+            
+            <p class="error-subtitle">
+                Como un tiro al arco que se va alto, esta página se perdió en el ciberespacio.
+            </p>
+            
+            <div class="error-message">
+                <i class="fas fa-info-circle me-2"></i>
+                La página que intentas acceder no existe o ha sido movida. Pero no te preocupes, 
+                ¡el torneo sigue en marcha!
+            </div>
+            
+            <div class="error-actions">
+                <a href="index.html" class="btn-custom btn-primary-custom">
+                    <i class="fas fa-home"></i>
+                    Volver al Inicio
+                </a>
+                <a href="javascript:history.back()" class="btn-custom btn-secondary-custom">
+                    <i class="fas fa-arrow-left"></i>
+                    Página Anterior
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función de búsqueda simple
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            
+            if (searchTerm.trim() === '') {
+                alert('Por favor, ingresa un término de búsqueda');
+                return;
+            }
+
+            // Redirecciones basadas en términos de búsqueda
+            const searchMappings = {
+                'inicio': 'index.html',
+                'home': 'index.html',
+                'principal': 'index.html',
+                'primera': 'posiciones/primera.html',
+                'mamis': 'posiciones/mamis.html',
+                'quinta': 'posiciones/quinta.html',
+                'sexta': 'posiciones/sexta.html',
+                'septima': 'posiciones/septima.html',
+                'octava': 'posiciones/octava.html',
+                'novena': 'posiciones/novena.html',
+                'mixto': 'posiciones/mixto.html',
+                'tabla': 'posiciones/primera.html',
+                'posiciones': 'posiciones/primera.html',
+                'fixture': 'fixture/primera.html',
+                'resultados': 'fixture/primera.html',
+                'partidos': 'fixture/primera.html'
+            };
+
+            // Buscar coincidencias
+            for (const [key, url] of Object.entries(searchMappings)) {
+                if (searchTerm.includes(key)) {
+                    window.location.href = url;
+                    return;
+                }
+            }
+
+            // Si no encuentra coincidencias
+            alert('No se encontraron resultados para "' + searchTerm + '". Intenta con: primera, mamis, fixture, tabla, etc.');
+        }
+
+        // Permitir búsqueda con Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Animación adicional para el puck
+        document.addEventListener('DOMContentLoaded', function() {
+            const puck = document.querySelector('.hockey-puck');
+            
+            puck.addEventListener('click', function() {
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = 'slide 1s ease-in-out';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

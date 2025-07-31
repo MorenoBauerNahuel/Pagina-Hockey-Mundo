@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Posiciones Primera - Mundo Hockey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-hockey-puck"></i>
+                MUNDO HOCKEY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-table me-1"></i>Tabla de Posiciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../posiciones/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-calendar-alt me-1"></i>Fixture/Resultados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../fixture/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="text-center">
+                <div class="breadcrumb-nav">
+                    <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="current">Tabla de Posiciones Primera</span>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Inicio
+            </a>
+
+            <!-- Page Title -->
+            <h1 class="page-title">Tabla de Posiciones</h1>
+
+            <!-- Tabla Container -->
+            <div class="tabla-container">
+                <div class="tabla-header">
+                    <h2 class="tabla-title">Categoría Primera</h2>
+                    <p class="tabla-subtitle">Temporada 2025 - Actualizado al 31 de Julio</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="positions-table">
+                        <thead>
+                            <tr>
+                                <th class="equipo-header">Equipo</th>
+                                <th><abbr class="tooltip-abbr" title="Puntos">Pts</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Partidos Jugados">PJ</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Partidos Ganados">PG</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Partidos Empatados">PE</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Partidos Perdidos">PP</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Goles a Favor">GF</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Goles en Contra">GC</abbr></th>
+                                <th><abbr class="tooltip-abbr" title="Diferencia de Gol">DF</abbr></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pos-1">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">1</span>
+                                    Los Leones FC
+                                </td>
+                                <td class="pts-column">21</td>
+                                <td>8</td>
+                                <td class="positive-stat">7</td>
+                                <td class="neutral-stat">0</td>
+                                <td class="negative-stat">1</td>
+                                <td class="positive-stat">24</td>
+                                <td class="negative-stat">8</td>
+                                <td class="positive-stat">+16</td>
+                            </tr>
+                            <tr class="pos-2">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">2</span>
+                                    Jaguares Negros
+                                </td>
+                                <td class="pts-column">19</td>
+                                <td>8</td>
+                                <td class="positive-stat">6</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">1</td>
+                                <td class="positive-stat">20</td>
+                                <td class="negative-stat">9</td>
+                                <td class="positive-stat">+11</td>
+                            </tr>
+                            <tr class="pos-3">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">3</span>
+                                    Zorros Rojos
+                                </td>
+                                <td class="pts-column">17</td>
+                                <td>8</td>
+                                <td class="positive-stat">5</td>
+                                <td class="neutral-stat">2</td>
+                                <td class="negative-stat">1</td>
+                                <td class="positive-stat">18</td>
+                                <td class="negative-stat">10</td>
+                                <td class="positive-stat">+8</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">4</span>
+                                    Halcones Negros
+                                </td>
+                                <td class="pts-column">15</td>
+                                <td>8</td>
+                                <td class="positive-stat">5</td>
+                                <td class="neutral-stat">0</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">15</td>
+                                <td class="negative-stat">12</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">5</span>
+                                    Pumas Dorados
+                                </td>
+                                <td class="pts-column">14</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">2</td>
+                                <td class="negative-stat">2</td>
+                                <td class="positive-stat">16</td>
+                                <td class="negative-stat">13</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">6</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">7</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">8</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">9</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">10</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">11</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">12</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">13</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">14</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">14</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">15</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                            <tr class="pos-clasificacion">
+                                <td class="equipo-cell">
+                                    <span class="position-indicator">16</span>
+                                    Rinocerontes FC
+                                </td>
+                                <td class="pts-column">13</td>
+                                <td>8</td>
+                                <td class="positive-stat">4</td>
+                                <td class="neutral-stat">1</td>
+                                <td class="negative-stat">3</td>
+                                <td class="positive-stat">14</td>
+                                <td class="negative-stat">11</td>
+                                <td class="positive-stat">+3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Legend -->
+                <div class="legend">
+                    <div class="legend-title">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Clasificación
+                    </div>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-color legend-gold"></div>
+                            <span>1° - Campeón</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-silver"></div>
+                            <span>2° - Subcampeón</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color legend-bronze"></div>
+                            <span>3° - Tercer puesto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mejorar tooltips para móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltips = document.querySelectorAll('.tooltip-abbr');
+            
+            tooltips.forEach(tooltip => {
+                tooltip.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Para dispositivos móviles, mostrar el tooltip al hacer clic
+                    if (window.innerWidth <= 768) {
+                        const title = this.getAttribute('title');
+                        if (title) {
+                            alert(title);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Animación de conteo para los puntos
+        document.addEventListener('DOMContentLoaded', function() {
+            const ptsColumns = document.querySelectorAll('.pts-column');
+            
+            ptsColumns.forEach((column, index) => {
+                const finalValue = parseInt(column.textContent);
+                let currentValue = 0;
+                const increment = Math.ceil(finalValue / 20);
+                
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= finalValue) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    column.textContent = currentValue;
+                }, 50 + (index * 10));
+            });
+        });
+    </script>
+</body>
+</html>

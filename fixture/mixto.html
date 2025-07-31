@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Primera - Mundo Hockey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-hockey-puck"></i>
+                MUNDO HOCKEY
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-table me-1"></i>Tabla de Posiciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../posiciones/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="../posiciones/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-calendar-alt me-1"></i>Fixture/Resultados
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../fixture/primera.html">
+                                <i class="fas fa-trophy me-2"></i>Primera
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/mamis.html">
+                                <i class="fas fa-heart me-2"></i>Mamis
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/quinta.html">
+                                <i class="fas fa-medal me-2"></i>Quinta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/sexta.html">
+                                <i class="fas fa-medal me-2"></i>Sexta
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/septima.html">
+                                <i class="fas fa-medal me-2"></i>Séptima
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/octava.html">
+                                <i class="fas fa-medal me-2"></i>Octava
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/novena.html">
+                                <i class="fas fa-medal me-2"></i>Novena
+                            </a></li>
+                            <li><a class="dropdown-item" href="../fixture/mixto.html">
+                                <i class="fas fa-users me-2"></i>Mixto
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="text-center">
+                <div class="breadcrumb-nav">
+                    <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="current">Resultados Primera</span>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <a href="../index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Volver al Inicio
+            </a>
+
+            <!-- Page Title -->
+            <h1 class="page-title">Resultados Primera</h1>
+
+            <!---------- Fecha 1 ----------->
+            <div class="fecha-section">
+                <h2 class="fecha-title">Fecha 1</h2>
+                <div class="partidos-grid">
+                    <!-- Partido 1 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Los Leones FC</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Águilas Doradas</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">15 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 2 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Tigres Unidos</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Dragones Azules</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">15 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 3 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Halcones Negros</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Lobos Grises</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">15 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 4 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Zorros Rojos</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Panteras Verdes</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">15 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 5 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Cóndores Blancos</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Pumas Dorados</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">16 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 6 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Jaguares Negros</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Búhos Plateados</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">16 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 7 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Osos Marrones</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Cobras Venenosas</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">16 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <!-- Partido 8 -->
+                    <div class="partido-card">
+                        <div class="vs-container">
+                            <div class="equipo">
+                                <div class="equipo-nombre">Tortugas Rápidas</div>
+                            </div>
+                            <div class="vs-divider">VS</div>
+                            <div class="equipo">
+                                <div class="equipo-nombre">Rinocerontes FC</div>
+                            </div>
+                        </div>
+                        <div class="resultado-container">
+                            <div class="resultado-score"></div>
+                            <div class="resultado-separador">-</div>
+                            <div class="resultado-score"></div>
+                        </div>
+                        <div class="partido-info">
+                            <div class="partido-fecha">16 de Julio, 2025</div>
+                            <!-- <div class="partido-hora">14:30 hs</div> -->
+                            <div class="partido-estado-pendiente">Pendiente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
