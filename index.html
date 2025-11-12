@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Hockey - Torneo 2025</title>
+    <title>Hockey League Zona Oeste - Torneo 2025</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating background elements -->
+    <!-- Floating background elementos -->
     <div class="floating-element"></div>
     <div class="floating-element"></div>
     <div class="floating-element"></div>
 
-    <!-- Navigation -->
+    <!-- Navegacion -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-hockey-puck"></i>
-                MUNDO HOCKEY
+            <a class="navbar-brand" href="../index.html">
+                <img src="img/logo.png" alt="Hockey League">
+                    HOCKEY LEAGUE
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -36,29 +36,15 @@
                             <i class="fas fa-table me-1"></i>Tabla de Posiciones
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="posiciones/primera.html">
-                                <i class="fas fa-trophy me-2"></i>Primera
+                            <li><a class="dropdown-item" href="fixture/torneo_noviembre.html">
+                                <i class="fas fa-trophy me-2"></i>Torneo Noviembre 2025
                             </a></li>
-                            <li><a class="dropdown-item" href="posiciones/mamis.html">
-                                <i class="fas fa-heart me-2"></i>Mamis
+                            <li><a class="dropdown-item" href="404.html">
+                                <i class="fas fa-heart me-2"></i>Proximamente..
                             </a></li>
-                            <li><a class="dropdown-item" href="posiciones/quinta.html">
-                                <i class="fas fa-medal me-2"></i>Quinta
-                            </a></li>
-                            <li><a class="dropdown-item" href="posiciones/sexta.html">
-                                <i class="fas fa-medal me-2"></i>Sexta
-                            </a></li>
-                            <li><a class="dropdown-item" href="posiciones/septima.html">
-                                <i class="fas fa-medal me-2"></i>Séptima
-                            </a></li>
-                            <li><a class="dropdown-item" href="posiciones/octava.html">
-                                <i class="fas fa-medal me-2"></i>Octava
-                            </a></li>
-                            <li><a class="dropdown-item" href="posiciones/novena.html">
-                                <i class="fas fa-medal me-2"></i>Novena
-                            </a></li>
-                            <li><a class="dropdown-item" href="posiciones/mixto.html">
-                                <i class="fas fa-users me-2"></i>Mixto
+                            <li><a class="dropdown-item" href="404.html
+                                ">
+                                <i class="fas fa-medal me-2"></i>Proximamente..
                             </a></li>
                         </ul>
                     </li>
@@ -67,29 +53,14 @@
                             <i class="fas fa-calendar-alt me-1"></i>Fixture
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="fixture/primera.html">
-                                <i class="fas fa-trophy me-2"></i>Primera
+                            <li><a class="dropdown-item" href="fixture/torneo_noviembre.html">
+                                    <i class="fas fa-trophy me-2"></i>Torneo Noviembre 2025
+                                </a></li>
+                                <li><a class="dropdown-item" href="404.html">
+                                <i class="fas fa-heart me-2"></i>Proximamente..
                             </a></li>
-                            <li><a class="dropdown-item" href="fixture/mamis.html">
-                                <i class="fas fa-heart me-2"></i>Mamis
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/quinta.html">
-                                <i class="fas fa-medal me-2"></i>Quinta
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/sexta.html">
-                                <i class="fas fa-medal me-2"></i>Sexta
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/septima.html">
-                                <i class="fas fa-medal me-2"></i>Séptima
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/octava.html">
-                                <i class="fas fa-medal me-2"></i>Octava
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/novena.html">
-                                <i class="fas fa-medal me-2"></i>Novena
-                            </a></li>
-                            <li><a class="dropdown-item" href="fixture/mixto.html">
-                                <i class="fas fa-users me-2"></i>Mixto
+                            <li><a class="dropdown-item" href="404.html">
+                                <i class="fas fa-medal me-2"></i>Proximamente..
                             </a></li>
                         </ul>
                     </li>
@@ -99,7 +70,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-section">
+    <section id="inicio" class="hero-section" style="padding-top: 180px;">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Torneo de Hockey 2025</h1>
@@ -108,9 +79,9 @@
                     <a href="#categorias" class="btn-custom btn-primary-custom">
                         <i class="fas fa-play me-2"></i>Ver Categorías
                     </a>
-                    <a href="fixture/primera.html" class="btn-custom btn-secondary-custom">
+                    <button class="btn-custom btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#fixtureModal">
                         <i class="fas fa-calendar me-2"></i>Próximos Partidos
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -151,10 +122,10 @@
         </div>
     </section>
 
-    <!-- Categories Section -->
+    <!-- Categorias -->
     <section id="categorias" class="categories-section">
         <div class="container">
-            <h2 class="section-title">Categorías del Torneo</h2>
+            <h2 class="section-title">Proximamente..</h2>
             <div class="category-grid">
                 <div class="category-card">
                     <div class="category-name">Primera</div>
@@ -192,10 +163,76 @@
         </div>
     </section>
 
+    <!-- Modal Fixture -->
+    <div class="modal fade" id="fixtureModal" tabindex="-1" aria-labelledby="fixtureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fixtureModalLabel">
+                        <i class="fas fa-calendar-alt me-2"></i>Selecciona una Categoría
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                            <a href="fixture/primera.html" class="category-modal-card">
+                                <i class="fas fa-trophy"></i>
+                                <span>Primera</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-heart"></i>
+                                <span>Mamis</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-medal"></i>
+                                <span>Quinta</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-medal"></i>
+                                <span>Sexta</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-medal"></i>
+                                <span>Séptima</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-medal"></i>
+                                <span>Octava</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-medal"></i>
+                                <span>Novena</span>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <a href="404.html" class="category-modal-card">
+                                <i class="fas fa-users"></i>
+                                <span>Mixto</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Mundo Hockey. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Hockey League zona oeste. Todos los derechos reservados.</p>
             <p><i class="fas fa-hockey-puck me-2"></i>Torneo de Hockey - Temporada 2025</p>
         </div>
     </footer>
