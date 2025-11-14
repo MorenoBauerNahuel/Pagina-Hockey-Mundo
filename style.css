@@ -2,6 +2,682 @@
    TORNEO HOCKEY - ESTILOS GLOBALES COMPLETAMENTE RESPONSIVE
    ========================================================================== 
    */
+   /* ==========================================================================
+           MODAL FLYER / POPUP STYLES
+           ========================================================================== */
+         
+        /* Estilos específicos para la página de reglamento */
+        .reglamento-hero {
+            background: linear-gradient(135deg, rgba(129, 199, 132, 0.9), rgba(100, 181, 246, 0.9)), 
+                        url('img/hockey-bg.jpg') center/cover;
+            padding: clamp(6rem, 15vh, 10rem) 0 clamp(3rem, 8vh, 5rem) 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reglamento-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent);
+        }
+
+        .reglamento-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .reglamento-icon {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .reglamento-hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .reglamento-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Contenedor principal */
+        .reglamento-container {
+            max-width: 1200px;
+            margin: -3rem auto 4rem;
+            padding: 0 var(--container-padding);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Tarjetas de sección */
+        .reglamento-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--accent-mint);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .reglamento-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .reglamento-section:nth-child(2) { border-left-color: var(--accent-blue); animation-delay: 0.1s; }
+        .reglamento-section:nth-child(3) { border-left-color: var(--accent-pink); animation-delay: 0.2s; }
+        .reglamento-section:nth-child(4) { border-left-color: #AED581; animation-delay: 0.3s; }
+        .reglamento-section:nth-child(5) { border-left-color: #FFB74D; animation-delay: 0.4s; }
+        .reglamento-section:nth-child(6) { border-left-color: #CE93D8; animation-delay: 0.5s; }
+        .reglamento-section:nth-child(7) { border-left-color: #80CBC4; animation-delay: 0.6s; }
+        .reglamento-section:nth-child(8) { border-left-color: #FFAB91; animation-delay: 0.7s; }
+        .reglamento-section:nth-child(9) { border-left-color: #FF8A65; animation-delay: 0.8s; }
+        .reglamento-section:nth-child(10) { border-left-color: #90CAF9; animation-delay: 0.9s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Títulos de sección */
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(40px, 8vw, 50px);
+            height: clamp(40px, 8vw, 50px);
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-right: 1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(129, 199, 132, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        /* Contenido */
+        .section-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+        }
+
+        .section-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Lista de reglas */
+        .regla-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-blue));
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .regla-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .regla-icon {
+            color: var(--accent-mint);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .regla-text {
+            flex: 1;
+            color: var(--text-primary);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        /* Highlight boxes */
+        .info-box {
+            background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(129, 199, 132, 0.1));
+            border-left: 4px solid var(--accent-blue);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 183, 77, 0.1), rgba(255, 171, 145, 0.1));
+            border-left: 4px solid #FFB74D;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, rgba(129, 199, 132, 0.1), rgba(174, 213, 129, 0.1));
+            border-left: 4px solid var(--accent-mint);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .info-box-title,
+        .warning-box-title,
+        .success-box-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Tabla de sanciones */
+        .sanctions-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sanctions-table thead {
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+            color: white;
+        }
+
+        .sanctions-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .sanctions-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+        }
+
+        .sanctions-table tbody tr {
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .sanctions-table tbody tr:hover {
+            background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-blue));
+            transform: scale(1.02);
+        }
+
+        .card-green {
+            background: #4CAF50;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .card-yellow {
+            background: #FFC107;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .card-red {
+            background: #F44336;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Botón de descarga */
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-blue));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.3);
+            margin: 2rem auto;
+            display: inline-flex;
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(129, 199, 132, 0.4);
+            color: white;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-number {
+                margin-bottom: 1rem;
+            }
+
+            .sanctions-table {
+                font-size: 0.8rem;
+            }
+
+            .sanctions-table th,
+            .sanctions-table td {
+                padding: 0.5rem;
+            }
+        }
+    
+        /* Overlay del modal */
+        .flyer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Contenedor del flyer */
+        .flyer-container {
+            position: relative;
+            background: linear-gradient(135deg, #E8F5E8 0%, #E3F2FD 50%, #FCE4EC 100%);
+            border-radius: 25px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+            animation: slideUp 0.5s ease forwards;
+            transform: translateY(50px);
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Botón cerrar */
+        .flyer-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .flyer-close:hover {
+            background: #ff4444;
+            color: white;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .flyer-close i {
+            font-size: 1.3rem;
+        }
+
+        /* Contenido del flyer */
+        .flyer-content {
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        /* Logo/Icono principal */
+        .flyer-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            animation: bounceIn 0.8s ease;
+        }
+
+        .flyer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Título del flyer */
+        .flyer-title {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #81C784, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInDown 0.6s ease 0.3s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subtítulo */
+        .flyer-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: fadeInDown 0.6s ease 0.4s both;
+        }
+
+        /* Highlights/Características */
+        .flyer-highlights {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .flyer-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .flyer-highlight-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .flyer-highlight-icon {
+            background: linear-gradient(135deg, #81C784, #64B5F6);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(129, 199, 132, 0.3);
+        }
+
+        .flyer-highlight-text {
+            flex: 1;
+        }
+
+        .flyer-highlight-text h4 {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .flyer-highlight-text p {
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Botones de acción */
+        .flyer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.6s both;
+        }
+
+        .flyer-btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .flyer-btn-primary {
+            background: linear-gradient(135deg, #81C784, #64B5F6);
+            color: white;
+            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.3);
+        }
+
+        .flyer-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(129, 199, 132, 0.4);
+            color: white;
+        }
+
+        .flyer-btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-primary);
+            border: 2px solid rgba(129, 199, 132, 0.3);
+        }
+
+        .flyer-btn-secondary:hover {
+            background: #81C784;
+            color: white;
+            transform: translateY(-3px);
+            border-color: #81C784;
+        }
+
+        /* Badge de "Nuevo" o "Promo" */
+        .flyer-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translateX(-50%) scale(1);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.05);
+            }
+        }
+
+        /* Banner inferior */
+        .flyer-footer {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1rem;
+            border-radius: 0 0 25px 25px;
+            margin-top: 2rem;
+            animation: fadeInUp 0.6s ease 0.7s both;
+        }
+
+        .flyer-footer-text {
+            font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Checkbox "No mostrar de nuevo" */
+        .flyer-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .flyer-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 576px) {
+            .flyer-container {
+                border-radius: 15px;
+                margin: 0.5rem;
+            }
+
+            .flyer-content {
+                padding: 2.5rem 1.5rem 1.5rem;
+            }
+
+            .flyer-logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .flyer-highlights {
+                padding: 1rem;
+            }
+
+            .flyer-actions {
+                flex-direction: column;
+            }
+
+            .flyer-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Ocultar el flyer (clase para JavaScript) */
+        .flyer-hidden {
+            display: none;
+        }
         /* Estilos específicos para la página de reglamento */
         .reglamento-hero {
             background: linear-gradient(135deg, rgba(129, 199, 132, 0.9), rgba(100, 181, 246, 0.9)), 
